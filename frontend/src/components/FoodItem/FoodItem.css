@@ -74,6 +74,9 @@
   font-size: 24px;
   color: white;
 }
+.food-item-img-container .add:hover {
+  scale: 1.1;
+}
 .food-item-counter {
   width: fit-content;
   position: absolute;

@@ -1,4 +1,8 @@
 import logo from "./logo.png";
+import logo2 from "./logo2.png";
+import app_download from "./app_download.png";
+import app_store from "./app_store.webp";
+import gg_play from "./gg_play.png";
 
 import food_1 from "./food_1.jpg";
 import food_2 from "./food_2.jpg";
@@ -44,6 +48,10 @@ import menu_8 from "./menu_8.jfif";
 
 export const assets = {
   logo,
+  logo2,
+  app_download,
+  app_store,
+  gg_play,
   food_1,
   food_2,
   food_3,
