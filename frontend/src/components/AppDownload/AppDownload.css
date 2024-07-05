@@ -23,3 +23,14 @@
 .app-download-platforms img:hover {
   transform: scale(1.1);
 }
+
+@media (max-width: 1050px) {
+  .app-download-platforms {
+    margin-top: -60px;
+  }
+}
+@media (max-width: 750px) {
+  .app-download-platforms {
+    margin-top: -40px;
+  }
+}
