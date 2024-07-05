@@ -1,15 +1,19 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./Navbar.css";
 import { assets } from "../../assets/assets";
 import { Button } from "antd";
 import { SearchOutlined, ShoppingOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
+import { StoreContext } from "../../context/StoreContext";
 
 const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("home");
+  const { getTotalCartAmount } = useContext(StoreContext);
   return (
     <div className="navbar">
-      <img src={assets.logo} alt="nothing in here" className="logo" />
+      <Link to={"/"}>
+        <img src={assets.logo} alt="nothing in here" className="logo" />
+      </Link>
       <ul className="navbar-menu">
         <Link
           to="/"
@@ -43,8 +47,11 @@ const Navbar = ({ setShowLogin }) => {
       <div className="navbar-right">
         <SearchOutlined className="search-icon" />
         <div className="navbar-search-icon">
-          <ShoppingOutlined className="shop-icon" />
-          <div className="dot"></div>
+          <Link to={"/cart"}>
+            {" "}
+            <ShoppingOutlined className="shop-icon" />{" "}
+          </Link>
+          <div className={getTotalCartAmount() === 0 ? "" : "dot"}></div>
         </div>
         <button onClick={() => setShowLogin(true)}>sign in</button>
       </div>

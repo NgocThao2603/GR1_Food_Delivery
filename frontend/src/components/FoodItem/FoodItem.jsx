@@ -38,7 +38,7 @@ const FoodItem = ({ id, name, price, description, image }) => {
           <Rate disabled defaultValue={4} className="rate-star" />
         </div>
         <p className="food-item-desc">{description}</p>
-        <p className="food-item-price">{price}</p>
+        <p className="food-item-price">${price}</p>
       </div>
     </div>
   );
