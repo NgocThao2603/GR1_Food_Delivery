@@ -3,12 +3,13 @@ import "./Navbar.css";
 import { assets } from "../../assets/assets";
 import { Button } from "antd";
 import { SearchOutlined, ShoppingOutlined } from "@ant-design/icons";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { StoreContext } from "../../context/StoreContext";
 
 const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("home");
   const { getTotalCartAmount } = useContext(StoreContext);
+
   return (
     <div className="navbar">
       <Link to={"/"}>
