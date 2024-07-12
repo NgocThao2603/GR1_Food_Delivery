@@ -3,6 +3,7 @@ import logo2 from "./logo2.png";
 import app_download from "./app_download.png";
 import app_store from "./app_store.webp";
 import gg_play from "./gg_play.png";
+import profile_icon from "./profile_icon.png";
 
 import food_1 from "./food_1.jpg";
 import food_2 from "./food_2.jpg";
@@ -52,6 +53,7 @@ export const assets = {
   app_download,
   app_store,
   gg_play,
+  profile_icon,
   food_1,
   food_2,
   food_3,
