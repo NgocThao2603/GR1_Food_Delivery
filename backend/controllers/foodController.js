@@ -1,6 +1,5 @@
 import foodModel from "../models/foodModel.js";
-
-import fs, { unlink } from "fs";
+import fs from "fs";
 
 // add food item
 const addFood = async (req, res) => {
@@ -47,4 +46,36 @@ const removeFood = async (req, res) => {
   }
 };
 
-export { addFood, listFood, removeFood };
+// update food item
+const updateFood = async (req, res) => {
+  const { id } = req.params; // Lấy ID từ URL params
+  const updateData = req.body;
+
+  if (!id) {
+    return res.status(400).json({ success: false, message: "ID is required" });
+  }
+
+  if (req.file) {
+    updateData.image = req.file.filename;
+  }
+
+  try {
+    const food = await foodModel.findByIdAndUpdate(id, updateData, {
+      new: true,
+    });
+    if (food) {
+      res.status(200).json({
+        success: true,
+        message: "Food updated successfully",
+        data: food,
+      });
+    } else {
+      res.status(404).json({ success: false, message: "Food not found" });
+    }
+  } catch (error) {
+    console.error("Error:", error); // Log error details
+    res.status(500).json({ success: false, message: error.message });
+  }
+};
+
+export { addFood, listFood, removeFood, updateFood };

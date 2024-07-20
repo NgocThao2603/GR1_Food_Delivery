@@ -1,0 +1,80 @@
+.edit {
+  width: 100%;
+  margin-left: 0px;
+  margin-top: 50px;
+  color: #6d6d6d;
+  font-size: 16px;
+}
+
+.edit form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.edit-img-upload {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.edit-img-upload img {
+  width: 100px;
+  cursor: pointer;
+}
+
+.edit-product-name,
+.edit-product-description {
+  width: max(40%, 280px);
+}
+
+.edit-product-name input,
+.edit-product-description textarea {
+  width: 100%;
+  padding: 10px;
+}
+
+.edit-category-price {
+  display: flex;
+  gap: 30px;
+}
+
+.edit-category-price select,
+.edit-category-price input {
+  max-width: 120px;
+  padding: 10px;
+}
+
+.update-btn {
+  max-width: 120px;
+  min-width: 120px;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.cancel-btn {
+  max-width: 120px;
+  min-width: 120px;
+  padding: 10px;
+  background-color: tomato;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.update-btn:hover {
+  background-color: #555555;
+}
+.cancel-btn:hover {
+  background-color: rgb(246, 143, 118);
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
