@@ -51,15 +51,11 @@ const MyOrders = () => {
               <img className="parcel-icon" src={assets.parcel} alt="" />
               <p>
                 {order.items.map((item, index) => (
-                  <span key={item.name + index}>
+                  <div key={item.name + index}>
                     {item.name} x {item.quantity}
-                    <br />
-                    <span className="order-date">
-                      {formatDateVN(order.date)}
-                    </span>
-                    {index < order.items.length - 1 ? ", " : ""}
-                  </span>
+                  </div>
                 ))}
+                <div className="order-date">{formatDateVN(order.date)}</div>
               </p>
               <p>${order.amount}.00</p>
               <p>Items: {order.items.length}</p>

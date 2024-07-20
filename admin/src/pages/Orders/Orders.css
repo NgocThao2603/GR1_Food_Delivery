@@ -14,6 +14,11 @@
   height: auto;
 }
 
+.order-date {
+  color: #949191;
+  font-size: 12px;
+  margin-top: 10px;
+}
 .order-item-food,
 .order-item-name {
   font-weight: 600;

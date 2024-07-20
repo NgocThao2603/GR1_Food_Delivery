@@ -27,6 +27,7 @@
 .my-orders-order .order-date {
   font-size: 12px;
   color: #949191;
+  margin-top: 10px;
 }
 .my-orders-order .status span {
   color: tomato;

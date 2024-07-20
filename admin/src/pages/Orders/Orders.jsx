@@ -78,15 +78,11 @@ const Orders = ({ url }) => {
             <div>
               <p className="order-item-food">
                 {order.items.map((item, index) => (
-                  <span key={item.name + index}>
+                  <div key={item.name + index}>
                     {item.name} x {item.quantity}
-                    <br />
-                    <span className="order-date">
-                      {formatDateVN(order.date)}
-                    </span>
-                    {index < order.items.length - 1 ? ", " : ""}
-                  </span>
+                  </div>
                 ))}
+                <div className="order-date">{formatDateVN(order.date)}</div>
               </p>
               <p className="order-item-name">
                 {order.address.firstName + " " + order.address.lastName}
