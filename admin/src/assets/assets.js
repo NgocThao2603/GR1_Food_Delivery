@@ -5,6 +5,7 @@ import logo from "./logo.png";
 import order_icon from "./order_icon.webp";
 import list_icon from "./list_icon.png";
 import parcel_icon from "./parcel_icon.png";
+import parcel from "./parcel.webp";
 export const assets = {
   logo,
   add_icon,
@@ -13,4 +14,5 @@ export const assets = {
   order_icon,
   list_icon,
   parcel_icon,
+  parcel,
 };
